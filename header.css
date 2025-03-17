@@ -16,6 +16,10 @@ p {
     text-align: left;
     opacity: 0.5;
     padding-top: 20px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; 
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
 .top-banner {
@@ -117,6 +121,7 @@ body {
     padding: 10px; 
     font-size: 18px; 
     font-weight: bold;
+    position: fixed;
 }
 .nav { 
     display: flex; 

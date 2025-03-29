@@ -1,0 +1,52 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.exercise {
+    width: 300px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+
+#bai1 button { background-color: red; }
+#bai2 button { background-color: yellow; color: black; }
+#bai3 button { background-color: lightblue; }
+#bai4 button { background-color: green; }
+#bai5 button { background-color: blue; }
+#bai6 button { background-color: orange; }
+#bai7 button { background-color: purple; }
+#bai8 button { background-color: brown; }
+#bai9 button { background-color: darkcyan; }
+#bai10 button { background-color: teal; }
+#bai11 button { background-color: tomato; }
+#bai12 button { background-color: darkorchid; }
+#bai13 button { background-color: darkslategray; }
+#bai14 button { background-color: darkred; }

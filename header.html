@@ -12,28 +12,31 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 </style>
-<body>   
-    <div class="top-banner">
-        <span>Bài tập HTML + CSS buổi 1</span>
+<body>  
+    <div class="header-fixed">
+        <div class="top-banner">
+            <span>Bài tập HTML + CSS buổi 1</span>
+        </div>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="./img/Site-logo.webp" alt="Dragonball Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="#">Plans</a></li>
+                <li><a href="#">Library</a></li>
+                <li><a href="#">Techdegree</a></li>
+                <li><a href="#">Community</a></li>
+                <li><a href="#">Resources</a></li>
+            </ul>
+            <div class="auth-buttons">
+                <a href="#" class="sign-in">Sign In</a>
+                <a href="#" class="free-trial">Free Trial</a>
+            </div>
+        </nav> 
     </div>
+  
 
-    <nav class="navbar">
-        <div class="logo">
-            <img src="./img/Site-logo.webp" alt="Dragonball Logo">
-        </div>
-        <ul class="nav-links">
-            <li><a href="#">Plans</a></li>
-            <li><a href="#">Library</a></li>
-            <li><a href="#">Techdegree</a></li>
-            <li><a href="#">Community</a></li>
-            <li><a href="#">Resources</a></li>
-        </ul>
-        <div class="auth-buttons">
-            <a href="#" class="sign-in">Sign In</a>
-            <a href="#" class="free-trial">Free Trial</a>
-        </div>
-    </nav> 
-    <main>
+    <main class="main-box">
         <div class="container">
             <div class="content">
                 <div class="box"><img src="./img/songoku.jpeg" alt="Goku"><h3>Tiểu sử của Songoku trong 7 viên ngọc rồng</h3><p>Songoku hồi nhỏ là một người có tâm hồn thuần khiết, vui vẻ, khá ngây thơ nhưng cũng vô cùng dũng cảm, dám hy sinh bản thân mình để bảo vệ cho sự an toàn và hoà bình của Trái Đất.</p></div>

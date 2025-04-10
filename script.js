@@ -87,3 +87,176 @@ function bai14() {
     const r = Number(prompt("Nhập bán kính hình tròn:"));
     console.log(`Diện tích hình tròn:`, Math.PI * r * r);
 }
+
+  
+  
+  function handleChangeColor(color) {
+    const boxColor = document.getElementById("box-color");
+    boxColor.style.backgroundColor = color;
+  }
+  
+  const buttonRed = document.getElementById("button-red");
+  if (buttonRed) {
+    buttonRed.addEventListener("click", () =>{handleChangeColor("red")});
+  }
+  
+  const buttonBlue = document.getElementById("button-blue");
+  if (buttonBlue) {
+    buttonBlue.addEventListener("click", () =>{handleChangeColor("blue")});
+  }
+    const image = {
+        url: "https://plus.unsplash.com/premium_photo-1664474619075-644dd191935f?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8aW1hZ2V8ZW58MHx8MHx8fDA%3D" ,
+        price: 20000,
+        unit: "USD",
+        id: 1,
+    }
+    image.price = 50000
+    image.color = "red"
+    delete image.url
+    const {url, price, unit, color} = image
+    console.log(
+    url, price, unit, color 
+)
+
+
+
+let student = {
+    name: "Tùng",
+    age: 22,
+    school: "Trường Đại học Ngoại ngữ"
+  };
+  
+ 
+  console.log(student);
+  
+ 
+  student.gender = "Tùng";
+  console.log("Sau khi thêm:", student);
+  
+  
+  student.age = 22;
+  console.log("Sau khi sửa:", student);
+  
+  
+  delete student.school;
+  console.log("Sau khi xóa:", student);
+
+
+
+  
+  let car = {
+    brand: "Toyota",
+    model: "Camry",
+    year: 2022,
+    color: "Đen",
+    price: "800 triệu"
+  };
+  
+  for (let key in car) {
+    console.log(key + ": " + car[key]);
+  }
+
+
+
+
+
+  function hasProperty(obj, key) {
+    return obj.hasOwnProperty(key);
+  }
+  
+  
+  let person = { name: "Tùng", age: 22 };
+  console.log(hasProperty(person, "name")); 
+  console.log(hasProperty(person, "height")); 
+  
+  
+
+
+  let calculator = {
+    add: function(a, b) {
+      return a + b;
+    },
+    subtract: function(a, b) {
+      return a - b;
+    },
+    multiply: function(a, b) {
+      return a * b;
+    },
+    divide: function(a, b) {
+      if (b === 0) {
+        return "Ko chia duoc cho 0";
+      }
+      return a / b;
+    }
+  };
+  
+  
+  console.log(calculator.add(2, 3)); 
+  console.log(calculator.divide(10, 0)); 
+
+  
+
+
+
+
+  function Book(title, author, year) {
+    this.title = title;
+    this.author = author;
+    this.year = year;
+  }
+  
+  let book1 = new Book("PPPPPP", "BBBBB", 1881);
+  let book2 = new Book("AAAAAA", "CCCCC", 1888);
+  
+  console.log(book1);
+  console.log(book2);
+
+  
+
+
+
+
+
+  let original = { name: "Tùng", age: 22 };
+
+
+let clone1 = Object.assign({}, original);
+
+
+let clone2 = { ...original };
+
+
+let clone3 = JSON.parse(JSON.stringify(original));
+
+console.log(clone1, clone2, clone3);
+
+
+
+
+
+
+
+
+let obj1 = { a: 1, b: 2 };
+let obj2 = { b: 3, c: 4 };
+
+function mergeObjects(o1, o2) {
+  return { ...o1, ...o2 };
+}
+
+let merged = mergeObjects(obj1, obj2);
+console.log(merged); 
+
+
+
+
+
+
+
+function countKeys(obj) {
+    return Object.keys(obj).length;
+  }
+  
+  let user = { name: "Tùng", age: 22, city: "Hà Nội" };
+  console.log(countKeys(user)); 
+  

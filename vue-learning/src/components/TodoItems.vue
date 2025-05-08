@@ -10,16 +10,30 @@
       </div>
     </div>
     <button class="delete-button" @click="handleDelete">delete</button>
+    <button class="edit-button" @click="handleEdit">edit</button>
+    <button class="done-button" @click="handleToggleDone">
+      {{ item.isComplete ? 'undo' : 'done' }}
+    </button>
   </div>
 </template>
 
 <script setup>
-const emit = defineEmits(['delete'])
+const emit = defineEmits(['delete', 'edit', 'toggleDone'])
+
 const props = defineProps({
   item: Object,
 })
+
 const handleDelete = () => {
-  emit('delete')
+  emit('delete', props.item)
+}
+
+const handleEdit = () => {
+  emit('edit', props.item)
+}
+
+const handleToggleDone = () => {
+  emit('toggleDone', props.item)
 }
 </script>
 <style lang="scss">
@@ -35,6 +49,7 @@ const handleDelete = () => {
     display: flex;
     align-items: center;
     gap: 10px;
+    flex: 1;
   }
   .hidden {
     opacity: 0;
@@ -42,6 +57,7 @@ const handleDelete = () => {
   .item-content {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     .complete {
       color: green;
       text-decoration: line-through;
@@ -56,6 +72,23 @@ const handleDelete = () => {
   }
   .delete-button {
     background-color: red;
+    border-radius: 3px;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+  }
+  .edit-button {
+    background-color: blue;
+    border-radius: 3px;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+  }
+  .done-button {
+    background-color: green;
+    border-radius: 3px;
     color: white;
     border: none;
     padding: 8px 12px;
